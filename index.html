@@ -1,5 +1,12 @@
+<!DOCTYPE html>
 <html>
 <head>
+
+<title>Alexander Merdian-Tarko</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Terra-_edge_blur.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,51 +14,70 @@
 
 <style>
 
-body {font-family: "Roboto"}
+body {
+	font-family: "Roboto";
+	margin: 0 auto;
+	max-width: 700px
+	}
 
-h1 {text-align: center;
-	font-size: 34}
+h1 {
+	text-align: center;
+	font-size: 34
+	}
 
-h2 {text-align: center;
-	font-size: 26}
+h2 {
+	text-align: center;
+	font-size: 26
+	}
 
-p {text-align: justified;
+h3 {
+	text-align: center;
+	font-size: 24
+	}
+
+p {
+	text-align: justify;
 	text-align-last: center;
-	font-size: 20px}
+	font-size: 20px
+	}
 
-div {text-align: center;
-	padding: 0rem 40rem;
-	font-size: 20px}
+div {
+	text-align: center;
+	font-size: 20px
+	}
 
-img {
-  border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+#profile_picture {
+	height:200px;
+    width:200px;
+    border-radius:50%;
+    overflow:hidden;
+	display: block;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto
+	}
 
 .collapsible {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-}
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 15px
+	}
 
 .active, .collapsible: hover {
-  background-color: white;
-}
+	background-color: white
+	}
 
-.content {  
-  padding: 0rem 40rem;
-  display: none;
-  overflow: hidden;
-  background-color: white;
-}
+.content {
+	display: none;
+	overflow: hidden;
+	background-color: white
+	}
 
 </style>
 
@@ -59,7 +85,11 @@ img {
 
 <body>
 
-<img src="profile_picture.jpg" alt="Avatar" class="center" style="width:200px">
+<div id="profile_picture" class="center">
+	<img src="profile_picture.jpg" alt="profile_picture" class="center" style="width:200px">
+</div>
+
+<h1>Alexander Merdian-Tarko</h1>
 
 <p>
 	<a href="mailto:alexandermerdiantarko@gmail.com">E-Mail</a>
@@ -68,24 +98,21 @@ img {
 	<a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv">XING</a>
 </p>
 
-<h1>Alexander Merdian-Tarko</h1>
+<p>
+	I'm a data analyst at <a href="https://www.unicef.de/">UNICEF Germany</a>,
+	helping my colleagues with everything data-related from visualizations to predictions
+	and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
+	I'm also part of the Data Taskforce and the Green Team.
+</p>
 
-<div>
-	<p>
-		I'm a data analyst at <a href="https://www.unicef.de/">UNICEF Germany</a>,
-		helping my colleagues with everything data-related from visualizations to predictions
-		and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
-		I'm also part of the Data Taskforce and the Green Team.
-	</p>
-	<p>
-		Climate change, nature conservation, gobal health, food security and education are some of the topics I care about.
-		Using data, machine learning and earth observation in a sustainable way to bring forward these topics is what I'm excited about.
-	</p>
-</div>
+<p>
+	Climate change, nature conservation, gobal health, food security and education are some of the topics I care about.
+	Using data, machine learning and earth observation in a sustainable way to bring forward these topics is what I'm excited about.
+</p>
 
-<button type="button" class="collapsible">Full bio</button>
+<button type="button" class="collapsible">Click here for full bio</button>
 <div class="content">
-	<p>		
+	<p>
 		I did my M. Sc. in Business Administration at the University of Cologne in Germany.
 		During my master's I focussed mainly on data science and technology management.
 		I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
@@ -124,14 +151,25 @@ for (i = 0; i < coll.length; i++) {
 
 <h2>Projects</h2>
 
-<div>
-	<ul>
-		<li>Our changing planet</li>
-		<li>Monitoring air quality NRW</li>
-		<li>Modeling cholera risk in India using ECVs and ML</li>
-		<li>Educating pupils about climate change through Environ-Mate</li>
-	</ul>
-</div>
+<h3>Exploring our changing planet</h3>
+<p>TBD</p>
+
+<br><br>
+
+<h3>Monitoring air quality in North Rhine-Westphalia, Germany</h3>
+<img src="sentinel_5p_no2_nrw_april_2019_2020_2021_2022.png" alt="sentinel_5p_no2_nrw_april_2019_2020_2021_2022" class="center" style="max-width:100%;height:auto">
+
+<br><br>
+
+<h3>Modeling cholera risk in India using ECVs and ML</h3>
+<img src="cholera_outbreaks_india_2010_2018.png" alt="cholera_outbreaks_india_2010_2018" class="center" style="max-width:100%;height:auto">
+
+<br><br>
+
+<h3>Educating pupils on climate change through Environ-Mate</h3>
+<img src="environ_mate.png" alt="environ_mate" class="center" style="max-width:100%;height:auto">
+
+<br><br>
 
 </body>
 </html>
