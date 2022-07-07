@@ -6,21 +6,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
 
 <style>
+
 body {font-family: "Roboto"}
+
 h1 {text-align: center;
 	font-size: 34}
+
 h2 {text-align: center;
 	font-size: 26}
+
 p {text-align: center;
 	font-size: 20px}
+
 div {text-align: center;
 	font-size: 20px}
+
 img {
   border-radius: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible: hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
 </style>
 
 </head>
@@ -46,15 +76,55 @@ img {
 	these topics is what I'm excited about.
 </p>
 
+<button type="button" class="collapsible">Full bio</button>
+<div class="content">
+	<p>
+		I did my B. Sc. in Economics and Business Administration at the University of Tübingen in Germany. <br>
+		During my bachelor's I was a member of our faculty's student council and Market Team. <br>
+		I spent a term abroad at Lomonosov Moscow State University in Russia <br>
+		and another term abroad at Oregon State University in the U. S. <br>
+		I also worked for the tech start-up Kreatize in Berlin.
+	</p>	
+	<p>
+		I did my M. Sc. in Business Administration at the University of Cologne in Germany. <br>
+		During my master's I focussed mainly on data science. <br>
+		I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India. <br>
+		I also worked for the tech start-up Metalshub in Düsseldorf and the digital consultancy FELD M in Munich.
+	</p>	
+	<p>
+		Besides, I also enjoy learning, among other things, about space, astronomy, philosophy <br>
+		and vegan/regional/seasonal cooking. <br>
+		I'm a member of the public observatory in Cologne. <br>
+		Sometimes I like to participate in hackathons with a positive societal impact.
+	<p/>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		content.style.display = "none";
+		} else {
+		content.style.display = "block";
+		}
+	});
+	}
+</script>
+
 <h2>Projects</h2>
 
 <div>
-  <ul>
-    <li>Our changing planet</li>
-    <li>Air quality NRW</li>
-    <li>Cholera risk modeling</li>
-    <li>Environ-Mate</li>
-  </ul>
+	<ul>
+		<li>Our changing planet</li>
+		<li>Air quality NRW</li>
+		<li>Cholera risk modeling</li>
+		<li>Environ-Mate</li>
+	</ul>
 </div>
 
 </body>
