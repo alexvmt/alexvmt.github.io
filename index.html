@@ -15,10 +15,12 @@ h1 {text-align: center;
 h2 {text-align: center;
 	font-size: 26}
 
-p {text-align: center;
+p {text-align: justified;
+	text-align-last: center;
 	font-size: 20px}
 
 div {text-align: center;
+	padding: 0rem 40rem;
 	font-size: 20px}
 
 img {
@@ -44,8 +46,8 @@ img {
   background-color: white;
 }
 
-.content {
-  padding: 0 18px;
+.content {  
+  padding: 0rem 40rem;
   display: none;
   overflow: hidden;
   background-color: white;
@@ -54,47 +56,51 @@ img {
 </style>
 
 </head>
+
 <body>
 
 <img src="profile_picture.jpg" alt="Avatar" class="center" style="width:200px">
 
-<p> <a href="mailto:alexandermerdiantarko@gmail.com">E-Mail</a> <a href="https://github.com/alexvmt">GitHub</a> <a href="https://www.linkedin.com/in/alexandermerdiantarko/">LinkedIn</a> <a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv">XING</a> </p>
+<p>
+	<a href="mailto:alexandermerdiantarko@gmail.com">E-Mail</a>
+	<a href="https://github.com/alexvmt">GitHub</a>
+	<a href="https://www.linkedin.com/in/alexandermerdiantarko/">LinkedIn</a>
+	<a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv">XING</a>
+</p>
 
 <h1>Alexander Merdian-Tarko</h1>
 
-<p>
-	I'm a data analyst at UNICEF Germany, helping my colleagues with everything data-related <br>
-	from visualizations to predictions and pursuing my own data-driven ideas <br>
-	to support UNICEF's mission on helping children all around the world. <br>
-	I'm also part of the Data Taskforce and the Green Team.
-</p>
-
-<p>
-	Climate change, nature conservation, gobal health, <br>
-	food security and education are some of the topics I care about. <br>
-	Using data, machine learning and earth observation to bring forward <br>
-	these topics is what I'm excited about.
-</p>
+<div>
+	<p>
+		I'm a data analyst at <a href="https://www.unicef.de/">UNICEF Germany</a>,
+		helping my colleagues with everything data-related from visualizations to predictions
+		and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
+		I'm also part of the Data Taskforce and the Green Team.
+	</p>
+	<p>
+		Climate change, nature conservation, gobal health, food security and education are some of the topics I care about.
+		Using data, machine learning and earth observation in a sustainable way to bring forward these topics is what I'm excited about.
+	</p>
+</div>
 
 <button type="button" class="collapsible">Full bio</button>
 <div class="content">
+	<p>		
+		I did my M. Sc. in Business Administration at the University of Cologne in Germany.
+		During my master's I focussed mainly on data science and technology management.
+		I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
+		I also worked for the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf
+		and the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich.
+	</p>
 	<p>
-		I did my B. Sc. in Economics and Business Administration at the University of Tübingen in Germany. <br>
-		During my bachelor's I was a member of our faculty's student council and Market Team. <br>
-		I spent a term abroad at Lomonosov Moscow State University in Russia <br>
-		and another term abroad at Oregon State University in the U. S. <br>
-		I also worked for the tech start-up Kreatize in Berlin.
-	</p>	
+		I did my B. Sc. in Economics and Business Administration at the University of Tübingen in Germany.
+		During my bachelor's I was a member of our faculty's student council and Market Team.
+		I spent a term abroad at Lomonosov Moscow State University in Russia and another term abroad at Oregon State University in the U. S.
+		I also worked for the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin.
+	</p>
 	<p>
-		I did my M. Sc. in Business Administration at the University of Cologne in Germany. <br>
-		During my master's I focussed mainly on data science. <br>
-		I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India. <br>
-		I also worked for the tech start-up Metalshub in Düsseldorf and the digital consultancy FELD M in Munich.
-	</p>	
-	<p>
-		Besides, I also enjoy learning, among other things, about space, astronomy, philosophy <br>
-		and vegan/regional/seasonal cooking. <br>
-		I'm a member of the public observatory in Cologne. <br>
+		Besides, I also enjoy learning, among other things, about space, astronomy, philosophy and vegan/regional/seasonal cooking.
+		I'm a member of the <a href="https://www.volkssternwartekoeln.de/">public observatory in Cologne</a>.
 		Sometimes I like to participate in hackathons with a positive societal impact.
 	<p/>
 </div>
@@ -121,9 +127,9 @@ for (i = 0; i < coll.length; i++) {
 <div>
 	<ul>
 		<li>Our changing planet</li>
-		<li>Air quality NRW</li>
-		<li>Cholera risk modeling</li>
-		<li>Environ-Mate</li>
+		<li>Monitoring air quality NRW</li>
+		<li>Modeling cholera risk in India using ECVs and ML</li>
+		<li>Educating pupils about climate change through Environ-Mate</li>
 	</ul>
 </div>
 
