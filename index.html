@@ -9,6 +9,44 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 		<style>
+			/* navbar */
+			.navbar {
+				display: flex;
+				justify-content: center;
+				background-color: #333;
+				padding: 10px;
+			}
+
+			.navbar a {
+				color: white;
+				padding: 14px 20px;
+				text-decoration: none;
+				text-align: center;
+			}
+
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			
+			/* Back to Start button */
+			#back-to-start {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				background-color: #333;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 5px;
+				cursor: pointer;
+				display: none; /* Hidden by default, will show on scroll */
+			}
+
+			#back-to-start:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			
 			body {
 			font-family: "Roboto";
 			margin: 0 auto;
@@ -80,6 +118,8 @@
 			overflow: hidden;
 			background-color: white
 			}
+			
+			/* skills container */
 			.skills-container {
 			display: flex;
 			flex-wrap: wrap;
@@ -99,7 +139,14 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body id="start">
+		<div class="navbar">
+			<a href="#start">Start</a>
+			<a href="#skills">Skills & Tools</a>
+			<a href="#projects">Projects</a>
+			<a href="#publications">Publications</a>
+			<a href="#news">News</a>
+		</div>
 		<div id="profile_picture" class="center">
 			<img src="profile_picture.jpg" alt="profile_picture" class="center" style="width:200px">
 		</div>
@@ -125,6 +172,7 @@
 			Climate change, conservation, gobal health, food security and education are some of the topics I care about.
 			Using data and machine learning in sustainable and responsible ways to bring forward these topics is what I'm excited about.
 		</p>
+		<!-- click here for full bio button -->
 		<button type="button" class="collapsible">Click here for full bio</button>
 		<div class="content">
 			<p>
@@ -150,6 +198,7 @@
 			<p/>
 		</div>
 		<script>
+			// collapse content on button click
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
 			
@@ -165,7 +214,7 @@
 				});
 				}
 		</script>
-		<h2>Skills & Tools</h2>
+		<h2 id="skills">Skills & Tools</h2>
 		<div class="skills-container">
 			<div class="skill-item"><i class="fas fa-code"></i> Coding: Python, R, SQL</div>
 			<div class="skill-item"><i class="fas fa-brain"></i> ML: scikit-learn, TensorFlow, Keras, PyTorch</div>
@@ -173,7 +222,7 @@
 			<div class="skill-item"><i class="fas fa-terminal"></i> Dev tools: Git, Bash, Linux</div>
 			<div class="skill-item"><i class="fas fa-users"></i> Soft skills: Teamwork, communication & presentation, data ethics</div>
 		</div>
-		<h2>Projects</h2>
+		<h2 id="projects">Projects</h2>
 		<h3><i class="fas fa-camera"></i> Camera traps</h3>
 		<h4>Classifying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
 		<p>
@@ -246,12 +295,12 @@
 			<a href="https://github.com/alexvmt/surface_water_mapping">Surface water mapping repository</a>
 		<p/>
 			<br><br>
-		<h2>Publications</h2>
+		<h2 id="publications">Publications</h2>
 		<p>
 			Guest contribution on "Data for Good Causes - An Overview" in Greiner, R., Berger, D., & Böck, M. (2022). Analytics und Artificial Intelligence. Springer Books. https://doi.org/10.1007/978-3-658-38159-2
 		</p>
 		<br><br>
-		<h2>News</h2>
+		<h2 id="news">News</h2>
 		<p>
 			<strong>September 2023</strong>: Participant in the <a href="https://www.ab.mpg.de/events/35372/332793">EMAC23 Workshop</a> on wildlife conservation and movement ecology organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
 		</p>
@@ -279,5 +328,25 @@
 		<p>
 			<strong>November 2018</strong>: Participant in <a href="https://www.bmuv.de/en/service/veranstaltungen/wettbewerbe/code4green-european-environmental-data-hackathon">Code4Green<a/>: 1st BMU Sustainability Hack in Berlin
 		</p>
+	
+		<!-- Back to Start button -->
+		<div id="back-to-start" onclick="scrollToTop()">Back to Start</div>
+
+		<script>
+			// show the Back to Start button when scrolling down
+			window.onscroll = function() {
+				var backButton = document.getElementById("back-to-start");
+				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+					backButton.style.display = "block";
+				} else {
+					backButton.style.display = "none";
+				}
+			};
+
+			// scroll to top function
+			function scrollToTop() {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
+		</script>
 	</body>
 </html>
