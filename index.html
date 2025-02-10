@@ -80,6 +80,23 @@
 			overflow: hidden;
 			background-color: white
 			}
+			.skills-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+			padding: 10px;
+			}
+			.skill-item {
+			background: #f8f9fa;
+			padding: 8px 12px;
+			border-radius: 8px;
+			font-size: 14px;
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			}
 		</style>
 	</head>
 	<body>
@@ -143,6 +160,14 @@
 				});
 				}
 		</script>
+		<h2>Skills & Tools</h2>
+		<div class="skills-container">
+			<div class="skill-item"><i class="fas fa-code"></i> Coding: Python, R, SQL</div>
+			<div class="skill-item"><i class="fas fa-brain"></i> ML: scikit-learn, TensorFlow, Keras, PyTorch</div>
+			<div class="skill-item"><i class="fas fa-globe"></i> Remote sensing: Google Earth Engine</div>
+			<div class="skill-item"><i class="fas fa-terminal"></i> Dev tools: Git, Bash, Linux</div>
+			<div class="skill-item"><i class="fas fa-users"></i> Soft skills: Teamwork, communication & presentation, data ethics</div>
+		</div>
 		<h2>Projects</h2>
 		<h3>Camera traps</h3>
 		<h4>Classifiying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
