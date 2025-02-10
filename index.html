@@ -1,282 +1,223 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-<title>Alexander Merdian-Tarko</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/99/Earth_but_Africa_is_smaller_%28climate_change%29.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
-
-<style>
-
-body {
-	font-family: "Roboto";
-	margin: 0 auto;
-	padding: 20px;
-	max-width: 700px
-	}
-
-h1 {
-	text-align: center;
-	font-size: 34
-	}
-
-h2 {
-	text-align: center;
-	font-size: 32
-	}
-
-h3 {
-	text-align: center;
-	font-size: 26
-	}
-
-h4 {
-	text-align: center;
-	font-size: 22
-	}
-
-p {
-	text-align: justify;
-	text-align-last: center;
-	font-size: 18px
-	}
-
-div {
-	text-align: center;
-	font-size: 18px
-	}
-
-figure {
-	text-align: justify;
-	text-align-last: center;
-	font-size: 18px
-	}
-
-figcaption {
-	text-align: justify;
-	text-align-last: center;
-	font-size: 12px;
-	font-style: italic
-	}
-
-#profile_picture {
-	height:200px;
-    width:200px;
-    border-radius:50%;
-    overflow:hidden;
-	display: block;
-	margin-top: 25px;
-	margin-left: auto;
-	margin-right: auto
-	}
-
-.collapsible {
-	background-color: white;
-	color: black;
-	cursor: pointer;
-	padding: 18px;
-	width: 100%;
-	border: none;
-	text-align: center;
-	outline: none;
-	font-size: 14px
-	}
-
-.active, .collapsible: hover {
-	background-color: white
-	}
-
-.content {
-	display: none;
-	overflow: hidden;
-	background-color: white
-	}
-
-</style>
-
-</head>
-
-<body>
-
-<div id="profile_picture" class="center">
-	<img src="profile_picture.jpg" alt="profile_picture" class="center" style="width:200px">
-</div>
-
-<h1>Alexander Merdian-Tarko</h1>
-
-<p>
-	<a href="mailto:alexandermerdiantarko@gmail.com"><i class="fas fa-envelope"></i> E-Mail</a> |
-    <a href="https://github.com/alexvmt"><i class="fab fa-github"></i> GitHub</a> |
-    <a href="https://www.linkedin.com/in/alexandermerdiantarko/"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-    <a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv"><i class="fab fa-xing"></i> XING</a>
-</p>
-
-<p>
-	I'm currently tackling food waste using ML as a Data Scientist at <a href="https://www.rewe-group.com/en/">REWE Group</a>.
-</p>
-
-<p>
-	Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
-	helping my colleagues with everything data-related from visualizations to predictions
-	and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
-	I've also been part of the Data Taskforce and the Green Team.
-</p>
-
-<p>
-	Climate change, conservation, gobal health, food security and education are some of the topics I care about.
-	Using data and machine learning in sustainable and responsible ways to bring forward these topics is what I'm excited about.
-</p>
-
-<button type="button" class="collapsible">Click here for full bio</button>
-<div class="content">
-	<p>
-		I did my MSc in Business Administration, Media and Technology Managment at the University of Cologne in Germany,
-		focussing on Data Science, Technology Management and Digital Transformation.
-		I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
-		I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich as an intern and working student (Digital Analytics)
-		and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf as a working student (Entrepreneurship and Marketing).
-	</p>
-	<p>
-		I did my BSc in Economics and Business Administration at the University of Tübingen in Germany.
-		During my bachelor's I was a member of our faculty's student council and Market Team.
-		I spent a term abroad at Lomonosov Moscow State University in Russia and another one at Oregon State University in the U. S.
-		I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin as an intern and working student (Business Development and Product Management).
-	</p>
-	<p>
-		Besides, I enjoy learning about astronomy, philosophy and vegan/regional/seasonal cooking.
-		I'm a member of the <a href="https://www.volkssternwartekoeln.de/">public observatory in Cologne</a>.
-		On occasion I like to participate in hackathons with a positive societal impact.
-	<p/>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-		content.style.display = "none";
-		} else {
-		content.style.display = "block";
-		}
-	});
-	}
-</script>
-
-<h2>Projects</h2>
-
-<h3>Camera traps</h3>
-
-<h4>Classifiying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
-
-<figure>
-	<img src="tiger_classification.jpg" alt="tiger_classification" class="center" style="max-width:75%;height:auto">
-	<figcaption>Credentials: LILA BC, MegaDetector, own illustration.</figcaption>	
-</figure>
-
-<p>
-	<a href="https://github.com/alexvmt/tiger_classification">Repository</a>	
-</p>
-
-<br><br>
-
-<h3>Remote sensing</h3>
-
-<h4>Classifying land cover in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
-<p>
-	<img src="example_land_cover_map.png" alt="example_land_cover_map" class="center" style="max-width:75%;height:auto">
-	<br><br>
-	<a href="https://github.com/alexvmt/land_cover_classification_kaza">Repository</a>
-</p>
-
-<br><br>
-
-<h4>Mapping cropland in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
-<p>
-	<img src="cropland_mapping_sioma_2020.gif" alt="cropland_mapping_sioma_2020" class="center" style="max-width:75%;height:auto">
-	<br><br>
-	<a href="https://github.com/alexvmt/farm_plot_detection/blob/main/report.pdf">Report</a> |
-	<a href="https://github.com/alexvmt/farm_plot_detection">Repository</a>
-</p>
-
-<br><br>
-
-<h3>Movement ecology</h3>
-
-<h4>Detecting stationarity in animal movement data using R Shiny (EMAC23 Coding Challenge for MoveApps by Max Planck Institute of Animal Bevhaior)</h4>
-<p>
-	<img src="stationarity_dashboard.png" alt="stationarity_dashboard" class="center" style="max-width:100%;height:auto">
-	<br><br>
-	<a href="https://github.com/alexvmt/stationarity_dashboard">Repository</a>
-<p/>
-
-<br><br>
-
-<h4>Linking animal movement data and surface water availability using R Shiny (with Okavango Research Institute)</h4>
-<p>
-	<img src="animal_movement_and_surface_water.png" alt="animal_movement_and_surface_water" class="center" style="max-width:100%;height:auto">
-	<br><br>
-	<a href="https://github.com/alexvmt/link-animal-movement-and-surface-water">MoveApps repository</a> |
-	<a href="https://github.com/alexvmt/surface_water_mapping">Surface water mapping repository</a>
-<p/>
-
-<br><br>
-
-<h2>Publications</h2>
-
-<p>
-	Guest contribution on "Data for Good Causes - An Overview" in Greiner, R., Berger, D., & Böck, M. (2022). Analytics und Artificial Intelligence. Springer Books. https://doi.org/10.1007/978-3-658-38159-2
-</p>
-
-<br><br>
-
-<h2>News</h2>
-
-<p>
-	<strong>September 2023</strong>: Participant in the <a href="https://www.ab.mpg.de/events/35372/332793">EMAC23 Workshop</a> on wildlife conservation and movement ecology organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
-</p>
-
-<p>
-	<strong>June 2023</strong>: Winning team in the <a href="https://www.exc.uni-konstanz.de/collective-behaviour/news-and-events/news/details/emac23-coding-challenge-participate-now/">EMAC23 Coding Challenge</a> organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
-</p>
-
-<p>
-	<strong>October 2022</strong>: Environ-Mate is featured in the data.europa.eu's <a href="https://data.europa.eu/en/academy/stories-use-case-observatory">Use Case Observatory</a> research project
-</p>
-
-<p>
-	<strong>September to November 2021</strong>: Machine Learning Engineer at <a href="https://omdena.com/projects/wood-fire/">Omdena’s Dryad Challenge</a> on “Building AI Model to Detect Forest Wood Fire through Sensor Data Analysis”
-</p>
-
-<p>
-	<strong>November 2020</strong>: Winning team in remote <a href="https://www.helmholtz-hida.de/en/events/hida-datathon/">HIDA Datathon</a> for grand challenges on climate change
-</p>
-
-<p>
-	<strong>March 2020</strong>: <a href="https://www.youtube.com/watch?v=QJJ3z9TrWFQ">Webinar</a> on Environ-Mate at EU Lunchtime Conference
-</p>
-
-<p>
-	<strong>November 2019</strong>: Speaker at <a href="https://www.meetup.com/de-DE/cologne-ai-and-machine-learning-meetup/events/263489876/">Cologne AI and ML Meetup on AI for Social Good</a>
-</p>
-
-<p>
-	<strong>June 2019</strong>: Finalist team in <a href="https://op.europa.eu/en/web/eudatathon/2019-edition">EU Datathon</a> in Brussels in the challenge on tackling climate change (<a href="https://github.com/environ-mate/app">Environ-Mate</a>)
-</p>
-
-<p>
-	<strong>November 2018</strong>: Participant in <a href="https://www.bmuv.de/en/service/veranstaltungen/wettbewerbe/code4green-european-environmental-data-hackathon">Code4Green<a/>: 1st BMU Sustainability Hack in Berlin
-</p>
-
-</body>
+	<head>
+		<title>Alexander Merdian-Tarko</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/99/Earth_but_Africa_is_smaller_%28climate_change%29.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<style>
+			body {
+			font-family: "Roboto";
+			margin: 0 auto;
+			padding: 20px;
+			max-width: 700px
+			}
+			h1 {
+			text-align: center;
+			font-size: 34
+			}
+			h2 {
+			text-align: center;
+			font-size: 32
+			}
+			h3 {
+			text-align: center;
+			font-size: 26
+			}
+			h4 {
+			text-align: center;
+			font-size: 22
+			}
+			p {
+			text-align: justify;
+			text-align-last: center;
+			font-size: 18px
+			}
+			div {
+			text-align: center;
+			font-size: 18px
+			}
+			figure {
+			text-align: justify;
+			text-align-last: center;
+			font-size: 18px
+			}
+			figcaption {
+			text-align: justify;
+			text-align-last: center;
+			font-size: 12px;
+			font-style: italic
+			}
+			#profile_picture {
+			height:200px;
+			width:200px;
+			border-radius:50%;
+			overflow:hidden;
+			display: block;
+			margin-top: 25px;
+			margin-left: auto;
+			margin-right: auto
+			}
+			.collapsible {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: center;
+			outline: none;
+			font-size: 14px
+			}
+			.active, .collapsible: hover {
+			background-color: white
+			}
+			.content {
+			display: none;
+			overflow: hidden;
+			background-color: white
+			}
+		</style>
+	</head>
+	<body>
+		<div id="profile_picture" class="center">
+			<img src="profile_picture.jpg" alt="profile_picture" class="center" style="width:200px">
+		</div>
+		<h1>Alexander Merdian-Tarko</h1>
+		<p>
+			<a href="mailto:alexandermerdiantarko@gmail.com"><i class="fas fa-envelope"></i> E-Mail</a> |
+			<a href="https://github.com/alexvmt"><i class="fab fa-github"></i> GitHub</a> |
+			<a href="https://www.linkedin.com/in/alexandermerdiantarko/"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+			<a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv"><i class="fab fa-xing"></i> XING</a>
+		</p>
+		<p>
+			I'm currently tackling food waste using ML as a Data Scientist at <a href="https://www.rewe-group.com/en/">REWE Group</a>.
+		</p>
+		<p>
+			Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
+			helping my colleagues with everything data-related from visualizations to predictions
+			and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
+			I've also been part of the Data Taskforce and the Green Team.
+		</p>
+		<p>
+			Climate change, conservation, gobal health, food security and education are some of the topics I care about.
+			Using data and machine learning in sustainable and responsible ways to bring forward these topics is what I'm excited about.
+		</p>
+		<button type="button" class="collapsible">Click here for full bio</button>
+		<div class="content">
+			<p>
+				I did my MSc in Business Administration, Media and Technology Managment at the University of Cologne in Germany,
+				focussing on Data Science, Technology Management and Digital Transformation.
+				I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
+				I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich as an intern and working student (Digital Analytics)
+				and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf as a working student (Entrepreneurship and Marketing).
+			</p>
+			<p>
+				I did my BSc in Economics and Business Administration at the University of Tübingen in Germany.
+				During my bachelor's I was a member of our faculty's student council and Market Team.
+				I spent a term abroad at Lomonosov Moscow State University in Russia and another one at Oregon State University in the U. S.
+				I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin as an intern and working student (Business Development and Product Management).
+			</p>
+			<p>
+				Besides, I enjoy learning about astronomy, philosophy and vegan/regional/seasonal cooking.
+				I'm a member of the <a href="https://www.volkssternwartekoeln.de/">public observatory in Cologne</a>.
+				On occasion I like to participate in hackathons with a positive societal impact.
+			<p/>
+		</div>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+					content.style.display = "none";
+					} else {
+					content.style.display = "block";
+					}
+				});
+				}
+		</script>
+		<h2>Projects</h2>
+		<h3>Camera traps</h3>
+		<h4>Classifiying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
+		<figure>
+			<img src="tiger_classification.jpg" alt="tiger_classification" class="center" style="max-width:75%;height:auto">
+			<figcaption>Credentials: LILA BC, MegaDetector, own illustration.</figcaption>
+		</figure>
+		<p>
+			<a href="https://github.com/alexvmt/tiger_classification">Repository</a>	
+		</p>
+		<br><br>
+		<h3>Remote sensing</h3>
+		<h4>Classifying land cover in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
+		<p>
+			<img src="example_land_cover_map.png" alt="example_land_cover_map" class="center" style="max-width:75%;height:auto">
+			<br><br>
+			<a href="https://github.com/alexvmt/land_cover_classification_kaza">Repository</a>
+		</p>
+		<br><br>
+		<h4>Mapping cropland in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
+		<p>
+			<img src="cropland_mapping_sioma_2020.gif" alt="cropland_mapping_sioma_2020" class="center" style="max-width:75%;height:auto">
+			<br><br>
+			<a href="https://github.com/alexvmt/farm_plot_detection/blob/main/report.pdf">Report</a> |
+			<a href="https://github.com/alexvmt/farm_plot_detection">Repository</a>
+		</p>
+		<br><br>
+		<h3>Movement ecology</h3>
+		<h4>Detecting stationarity in animal movement data using R Shiny (EMAC23 Coding Challenge for MoveApps by Max Planck Institute of Animal Bevhaior)</h4>
+		<p>
+			<img src="stationarity_dashboard.png" alt="stationarity_dashboard" class="center" style="max-width:100%;height:auto">
+			<br><br>
+			<a href="https://github.com/alexvmt/stationarity_dashboard">Repository</a>
+		<p/>
+			<br><br>
+		<h4>Linking animal movement data and surface water availability using R Shiny (with Okavango Research Institute)</h4>
+		<p>
+			<img src="animal_movement_and_surface_water.png" alt="animal_movement_and_surface_water" class="center" style="max-width:100%;height:auto">
+			<br><br>
+			<a href="https://github.com/alexvmt/link-animal-movement-and-surface-water">MoveApps repository</a> |
+			<a href="https://github.com/alexvmt/surface_water_mapping">Surface water mapping repository</a>
+		<p/>
+			<br><br>
+		<h2>Publications</h2>
+		<p>
+			Guest contribution on "Data for Good Causes - An Overview" in Greiner, R., Berger, D., & Böck, M. (2022). Analytics und Artificial Intelligence. Springer Books. https://doi.org/10.1007/978-3-658-38159-2
+		</p>
+		<br><br>
+		<h2>News</h2>
+		<p>
+			<strong>September 2023</strong>: Participant in the <a href="https://www.ab.mpg.de/events/35372/332793">EMAC23 Workshop</a> on wildlife conservation and movement ecology organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
+		</p>
+		<p>
+			<strong>June 2023</strong>: Winning team in the <a href="https://www.exc.uni-konstanz.de/collective-behaviour/news-and-events/news/details/emac23-coding-challenge-participate-now/">EMAC23 Coding Challenge</a> organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
+		</p>
+		<p>
+			<strong>October 2022</strong>: Environ-Mate is featured in the data.europa.eu's <a href="https://data.europa.eu/en/academy/stories-use-case-observatory">Use Case Observatory</a> research project
+		</p>
+		<p>
+			<strong>September to November 2021</strong>: Machine Learning Engineer at <a href="https://omdena.com/projects/wood-fire/">Omdena’s Dryad Challenge</a> on “Building AI Model to Detect Forest Wood Fire through Sensor Data Analysis”
+		</p>
+		<p>
+			<strong>November 2020</strong>: Winning team in remote <a href="https://www.helmholtz-hida.de/en/events/hida-datathon/">HIDA Datathon</a> for grand challenges on climate change
+		</p>
+		<p>
+			<strong>March 2020</strong>: <a href="https://www.youtube.com/watch?v=QJJ3z9TrWFQ">Webinar</a> on Environ-Mate at EU Lunchtime Conference
+		</p>
+		<p>
+			<strong>November 2019</strong>: Speaker at <a href="https://www.meetup.com/de-DE/cologne-ai-and-machine-learning-meetup/events/263489876/">Cologne AI and ML Meetup on AI for Social Good</a>
+		</p>
+		<p>
+			<strong>June 2019</strong>: Finalist team in <a href="https://op.europa.eu/en/web/eudatathon/2019-edition">EU Datathon</a> in Brussels in the challenge on tackling climate change (<a href="https://github.com/environ-mate/app">Environ-Mate</a>)
+		</p>
+		<p>
+			<strong>November 2018</strong>: Participant in <a href="https://www.bmuv.de/en/service/veranstaltungen/wettbewerbe/code4green-european-environmental-data-hackathon">Code4Green<a/>: 1st BMU Sustainability Hack in Berlin
+		</p>
+	</body>
 </html>
