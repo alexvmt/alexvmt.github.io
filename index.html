@@ -111,13 +111,15 @@
 			<a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv"><i class="fab fa-xing"></i> XING</a>
 		</p>
 		<p>
-			I'm currently a Data Scientist on a product team at <a href="https://www.rewe-group.com/en/">REWE Group<a/> where we tackle food waste using ML.
+			I'm currently a Data Scientist on a product team at <a href="https://www.rewe-group.com/en/">REWE Group
+			<a/>
+				where we tackle food waste using ML.
 		</p>
 		<p>
-			Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
-			helping my colleagues with everything data-related from visualizations to predictions
-			and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
-			I've also been part of the Data Taskforce and the Green Team.
+		Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
+		helping my colleagues with everything data-related from visualizations to predictions
+		and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
+		I've also been part of the Data Taskforce and the Green Team.
 		</p>
 		<p>
 			Climate change, conservation, gobal health, food security and education are some of the topics I care about.
@@ -129,14 +131,17 @@
 				I did my MSc in Business Administration, Media and Technology Managment at the University of Cologne in Germany,
 				focussing on Data Science, Technology Management and Digital Transformation.
 				I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
-				I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich as an intern and working student (Digital Analytics)
-				and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf as a working student (Entrepreneurship and Marketing).
+				I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich
+				as an intern and working student (Digital Analytics)
+				and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf
+				as a working student (Entrepreneurship and Marketing).
 			</p>
 			<p>
 				I did my BSc in Economics and Business Administration at the University of Tübingen in Germany.
 				During my bachelor's I was a member of our faculty's student council and Market Team.
 				I spent a term abroad at Lomonosov Moscow State University in Russia and another one at Oregon State University in the U. S.
-				I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin as an intern and working student (Business Development and Product Management).
+				I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin
+				as an intern and working student (Business Development and Product Management).
 			</p>
 			<p>
 				Besides, I enjoy learning about astronomy, philosophy and vegan/regional/seasonal cooking.
@@ -169,8 +174,15 @@
 			<div class="skill-item"><i class="fas fa-users"></i> Soft skills: Teamwork, communication & presentation, data ethics</div>
 		</div>
 		<h2>Projects</h2>
-		<h3>Camera traps</h3>
-		<h4>Classifiying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
+		<h3><i class="fas fa-camera"></i> Camera traps</h3>
+		<h4>Classifying tigers (and other species) in camera trap images using ML, open data, open source tools and free compute resources </h4>
+		<p>
+			This project focuses on building a machine learning model to classify tigers (and other species) in camera trap images,
+			using open-source tools (MEWC), open data (LILA BC), and free compute resources (Colab and Kaggle).
+			The goal is to provide an automated solution for ecologists and NGOs working on tiger conservation
+			to reduce the manual labor involved in analyzing large volumes of camera trap images.
+			The trained species classifier is made available through EcoAssist.
+		</p>
 		<figure>
 			<img src="tiger_classification.jpg" alt="tiger_classification" class="center" style="max-width:75%;height:auto">
 			<figcaption>Credentials: LILA BC, MegaDetector, own illustration.</figcaption>
@@ -179,8 +191,14 @@
 			<a href="https://github.com/alexvmt/tiger_classification">Repository</a>	
 		</p>
 		<br><br>
-		<h3>Remote sensing</h3>
+		<h3><i class="fas fa-satellite-dish"></i> Remote sensing</h3>
 		<h4>Classifying land cover in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
+		<p>
+			This project constitutes a set of scripts and notebooks for land cover classification in the Kavango-Zambezi 
+			Transfrontier Conservation Area (KAZA), using Sentinel-2 and ML.
+			The pipeline trains the model in Colab and performs inference in Google Earth Engine, making the process flexible and efficient.
+			While focused on KAZA, it can be adapted for other regions with suitable labeled data for training.
+		</p>
 		<p>
 			<img src="example_land_cover_map.png" alt="example_land_cover_map" class="center" style="max-width:75%;height:auto">
 			<br><br>
@@ -189,14 +207,25 @@
 		<br><br>
 		<h4>Mapping cropland in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
 		<p>
+			This project aims to monitor agricultural land use in the Kavango-Zambezi Transfrontier Conservation Area (KAZA).
+			The focus is on detecting farm plot locations and tracking their changes over time using Sentinel-2 and ML.
+			The project offers tools for data processing, model training and visualizations, enabling the detailed mapping of croplands.
+		</p>
+		<p>
 			<img src="cropland_mapping_sioma_2020.gif" alt="cropland_mapping_sioma_2020" class="center" style="max-width:75%;height:auto">
 			<br><br>
 			<a href="https://github.com/alexvmt/farm_plot_detection/blob/main/report.pdf">Report</a> |
 			<a href="https://github.com/alexvmt/farm_plot_detection">Repository</a>
 		</p>
 		<br><br>
-		<h3>Movement ecology</h3>
+		<h3><i class="fas fa-paw"></i> Movement ecology</h3>
 		<h4>Detecting stationarity in animal movement data using R Shiny (EMAC23 Coding Challenge for MoveApps by Max Planck Institute of Animal Bevhaior)</h4>
+		<p>
+			The Stationarity Dashboard is an App on MoveApps,
+			designed to track animal behavior over time and identify stationary individuals or anomalies in movement patterns.
+			It provides users with a range of features (summary table, tracker map and distance plot)
+			and options (individual and date range filters and inputs for stationarity detection) to conveniently analyze their movement data.
+		</p>
 		<p>
 			<img src="stationarity_dashboard.png" alt="stationarity_dashboard" class="center" style="max-width:100%;height:auto">
 			<br><br>
@@ -204,6 +233,12 @@
 		<p/>
 			<br><br>
 		<h4>Linking animal movement data and surface water availability using R Shiny (with Okavango Research Institute)</h4>
+		<p>
+			This is another App on MoveApps, linking animal movement and surface water
+			that has been mapped in Google Earth Engine using Sentinel-1 beforehand.
+			It allows users to track changes in animal movement and surface water over time, trying to establish a connection.
+			This is a work in progress, and working with Sentinel-1 data in some regions comes with certain caveats.
+		</p>
 		<p>
 			<img src="animal_movement_and_surface_water.png" alt="animal_movement_and_surface_water" class="center" style="max-width:100%;height:auto">
 			<br><br>
