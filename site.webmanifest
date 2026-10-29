@@ -1,0 +1,12 @@
+{
+	"name": "Alexander Merdian-Tarko",
+	"short_name": "Alexander MT",
+	"start_url": "/",
+	"display": "browser",
+	"theme_color": "#333333",
+	"background_color": "#ffffff",
+	"icons": [
+		{ "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+		{ "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+	]
+}

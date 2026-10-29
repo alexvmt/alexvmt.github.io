@@ -1,391 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>Alexander Merdian-Tarko</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-		<style>
-			/* navbar */
-			.navbar {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background-color: #333;
-			padding: 10px 0;
-			display: flex;
-			justify-content: center;
-			gap: 10px;
-			flex-wrap: wrap; /* Allows wrapping on smaller screens */
-			z-index: 1000;
-			}
-			.navbar a {
-			color: white;
-			padding: 10px 14px;
-			text-decoration: none;
-			text-align: center;
-			font-size: 16px;
-			}
-			.navbar a:hover {
-			background-color: #ddd;
-			color: black;
-			}
-			/* Back to Start button */
-			#back-to-start {
-			position: fixed;
-			bottom: 15px;
-			right: 15px;
-			background-color: #333;
-			color: white;
-			padding: 14px 18px;
-			border-radius: 50px;
-			cursor: pointer;
-			display: none; /* Hidden by default */
-			font-size: 14px;
-			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-			}
-			#back-to-start:hover {
-			background-color: #ddd;
-			color: black;
-			}
-			/* body styling */
-			body {
-			font-family: "Roboto", sans-serif;
-			margin: 0 auto;
-			padding: 70px 20px; /* prevents content from being hidden under navbar */
-			max-width: 700px;
-			line-height: 1.6; /* better readability */
-			font-size: 18px; /* adjusts for better mobile experience */
-			}
-			/* responsive design */
-			@media (max-width: 600px) {
-			.navbar {
-			gap: 5px;
-			padding: 8px 0;
-			}
-			.navbar a {
-			font-size: 14px;
-			padding: 8px 12px;
-			}
-			#back-to-start {
-			padding: 12px 16px;
-			font-size: 12px;
-			}
-			}
-			h1 {
-			text-align: center;
-			font-size: 34
-			}
-			h2 {
-			text-align: center;
-			font-size: 32
-			}
-			h3 {
-			text-align: center;
-			font-size: 26
-			}
-			h4 {
-			text-align: center;
-			font-size: 22
-			}
-			p {
-			text-align: justify;
-			text-align-last: center;
-			font-size: 18px
-			}
-			div {
-			text-align: center;
-			font-size: 18px
-			}
-			figure {
-			text-align: justify;
-			text-align-last: center;
-			font-size: 18px
-			}
-			figcaption {
-			text-align: justify;
-			text-align-last: center;
-			font-size: 12px;
-			font-style: italic
-			}
-			#profile_picture {
-			height:200px;
-			width:200px;
-			border-radius:50%;
-			overflow:hidden;
-			display: block;
-			margin-top: 25px;
-			margin-left: auto;
-			margin-right: auto
-			}
-			.collapsible {
-			background-color: white;
-			color: black;
-			cursor: pointer;
-			padding: 18px;
-			width: 100%;
-			border: none;
-			text-align: center;
-			outline: none;
-			font-size: 14px
-			}
-			.active, .collapsible: hover {
-			background-color: white
-			}
-			.content {
-			display: none;
-			overflow: hidden;
-			background-color: white
-			}
-			/* skills container */
-			.skills-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 10px;
-			padding: 10px;
-			}
-			.skill-item {
-			background: #f8f9fa;
-			padding: 8px 12px;
-			border-radius: 8px;
-			font-size: 14px;
-			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-			display: flex;
-			align-items: center;
-			gap: 8px;
-			}
-		</style>
+		<meta name="description" content="Data Scientist at REWE Group tackling food waste with ML. Previously UNICEF Germany. Interested in climate, conservation, global health and responsible data science.">
+		<meta name="author" content="Alexander Merdian-Tarko">
+		<meta name="theme-color" content="#333333">
+		<link rel="canonical" href="https://alexvmt.github.io/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Alexander Merdian-Tarko">
+		<meta property="og:description" content="Data Scientist at REWE Group tackling food waste with ML. Previously UNICEF Germany. Interested in climate, conservation, global health and responsible data science.">
+		<meta property="og:url" content="https://alexvmt.github.io/">
+		<meta property="og:image" content="https://alexvmt.github.io/assets/profile_picture.jpg">
+		<meta property="og:image:alt" content="Portrait of Alexander Merdian-Tarko">
+		<meta name="twitter:card" content="summary">
+		<link rel="icon" type="image/png" href="favicon.png" sizes="160x160">
+		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body id="start">
-		<div class="navbar">
-			<a href="#start">Start</a>
-			<a href="#skills">Skills & Tools</a>
-			<a href="#projects">Projects</a>
-			<a href="#publications">Publications</a>
-			<a href="#news">News</a>
-		</div>
-		<div id="profile_picture" class="center">
-			<img src="profile_picture.jpg" alt="profile_picture" class="center" style="width:200px">
-		</div>
-		<h1>Alexander Merdian-Tarko</h1>
-		<p>
-			<i class="fas fa-envelope"></i> <a href="mailto:alexandermerdiantarko@gmail.com">E-Mail</a>
-			<i class="fab fa-github"></i> <a href="https://github.com/alexvmt">GitHub</a>
-			<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/alexandermerdiantarko/">LinkedIn</a>
-			<i class="fab fa-xing"></i> <a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv">XING</a>
-		</p>
-		<p>
-			I'm currently a Data Scientist on a product team at <a href="https://www.rewe-group.com/en/">REWE Group<a/>
-			where we tackle food waste using ML.
-		</p>
-		<p>
-		Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
-		helping my colleagues with everything data-related from visualizations to predictions
-		and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
-		I've also been part of the Data Taskforce and the Green Team.
-		</p>
-		<p>
-			Climate change, conservation, gobal health, food security and education are some of the topics I care about.
-			Using data and machine learning in sustainable and responsible ways to bring forward these topics is what I'm excited about.
-		</p>
-		<!-- click here for full bio button -->
-		<button type="button" class="collapsible">Click here for full bio</button>
-		<div class="content">
-			<p>
-				I did my MSc in Business Administration, Media and Technology Managment at the University of Cologne in Germany,
-				focussing on Data Science, Technology Management and Digital Transformation.
-				I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
-				I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich
-				as an intern and working student (Digital Analytics)
-				and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf
-				as a working student (Entrepreneurship and Marketing).
+		<a class="skip-link" href="#main">Skip to content</a>
+		<nav class="navbar navbar-expand-md sticky-top" aria-label="Main">
+			<div class="container">
+				<a class="navbar-brand" href="#start">Alexander Merdian-Tarko</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="nav">
+					<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills &amp; Tools</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+<li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main id="main" class="container page py-5">
+			<img class="profile" src="assets/profile_picture.jpg" alt="Portrait of Alexander Merdian-Tarko" width="200" height="200">
+			<h1>Alexander Merdian-Tarko</h1>
+			<p class="contact">
+				<i class="fas fa-envelope" aria-hidden="true"></i> <a class="email" href="#start" data-user="alexandermerdiantarko" data-domain="gmail.com">E-Mail</a>
+				<i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/alexvmt">GitHub</a>
+				<i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/alexandermerdiantarko/">LinkedIn</a>
+				<i class="fab fa-xing" aria-hidden="true"></i> <a href="https://www.xing.com/profile/Alexander_MerdianTarko/cv">XING</a>
 			</p>
 			<p>
-				I did my BSc in Economics and Business Administration at the University of Tübingen in Germany.
-				During my bachelor's I was a member of our faculty's student council and Market Team.
-				I spent a term abroad at Lomonosov Moscow State University in Russia and another one at Oregon State University in the U. S.
-				I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin
-				as an intern and working student (Business Development and Product Management).
+				I'm currently a Data Scientist on a product team at <a href="https://www.rewe-group.com/en/">REWE Group</a>
+				where we tackle food waste using ML.
 			</p>
 			<p>
-				Besides, I enjoy learning about astronomy, philosophy and vegan/regional/seasonal cooking.
-				I'm a member of the <a href="https://www.volkssternwartekoeln.de/">public observatory in Cologne</a>.
-				On occasion I like to participate in hackathons with a positive societal impact.
-			<p/>
-		</div>
+				Previously I've been a Data Scientist at <a href="https://www.unicef.de/">UNICEF Germany</a>,
+				helping my colleagues with everything data-related from visualizations to predictions
+				and pursuing my own data-driven ideas to support UNICEF's mission on helping children all around the world.
+				I've also been part of the Data Taskforce and the Green Team.
+			</p>
+			<p>
+				Climate change, conservation, global health, food security and education are some of the topics I care about.
+				Using data and machine learning in sustainable and responsible ways to bring forward these topics is what I'm excited about.
+			</p>
+			<!-- click here for full bio button -->
+			<button type="button" class="btn btn-sm btn-outline-secondary bio-toggle" data-bs-toggle="collapse" data-bs-target="#bio" aria-expanded="false" aria-controls="bio">Click here for full bio</button>
+			<div class="collapse" id="bio">
+				<p>
+					I did my MSc in Business Administration, Media and Technology Management at the University of Cologne in Germany,
+					focusing on Data Science, Technology Management and Digital Transformation.
+					I was a member of Enactus and spent a term abroad at the Indian Institute of Management Ahmedabad in India.
+					I worked at the digital consultancy <a href="https://www.feld-m.de/en/">FELD M</a> in Munich
+					as an intern and working student (Digital Analytics)
+					and at the tech start-up <a href="https://www.metals-hub.com/">Metalshub</a> in Düsseldorf
+					as a working student (Entrepreneurship and Marketing).
+				</p>
+				<p>
+					I did my BSc in Economics and Business Administration at the University of Tübingen in Germany.
+					During my bachelor's I was a member of our faculty's student council and Market Team.
+					I spent a term abroad at Lomonosov Moscow State University in Russia and another one at Oregon State University in the U. S.
+					I worked at the tech start-up <a href="https://kreatize.com/">Kreatize</a> in Berlin
+					as an intern and working student (Business Development and Product Management).
+				</p>
+				<p>
+					Besides, I enjoy learning about astronomy, philosophy and vegan/regional/seasonal cooking.
+					I'm a member of the <a href="https://www.volkssternwartekoeln.de/">public observatory in Cologne</a>.
+					On occasion I like to participate in hackathons with a positive societal impact.
+				</p>
+			</div>
+			<section id="skills" aria-labelledby="skills-title">
+				<h2 id="skills-title">Skills &amp; Tools</h2>
+				<div class="skills-container">
+					<div class="skill-item"><i class="fas fa-code" aria-hidden="true"></i> Coding: Python, R, SQL</div>
+					<div class="skill-item"><i class="fas fa-brain" aria-hidden="true"></i> ML: scikit-learn, TensorFlow, Keras, PyTorch, caret</div>
+					<div class="skill-item"><i class="fas fa-globe" aria-hidden="true"></i> Remote sensing &amp; GIS: Google Earth Engine</div>
+					<div class="skill-item"><i class="fas fa-terminal" aria-hidden="true"></i> Dev tools: Git, Bash, Linux</div>
+					<div class="skill-item"><i class="fas fa-users" aria-hidden="true"></i> Soft skills: Teamwork, communication &amp; presentation, data ethics</div>
+				</div>
+			</section>
+			<section id="projects" aria-labelledby="projects-title">
+				<h2 id="projects-title">Projects</h2>
+				<h3><i class="fas fa-camera" aria-hidden="true"></i> Camera traps</h3>
+				<article class="project">
+					<h4>TeraiNet: A species classification model focused on the Terai region in Nepal to support Bengal tiger conservation</h4>
+					<p>
+						This project is about building a species classification model for the Terai region in Nepal,
+						using ML, open data, open source tools and free compute resources.
+						The goal is to provide an automated solution for ecologists and NGOs working on Bengal tiger conservation
+						to reduce the manual labor involved in analyzing large volumes of camera trap images.
+						The model is made openly available through AddaxAI.
+					</p>
+					<figure class="project-figure">
+						<img class="project-img narrow" src="assets/terainet.jpg" alt="Camera trap photo of a Bengal tiger with a detection box labelled animal 90%" width="700" height="525" loading="lazy">
+						<figcaption>Credentials: LILA BC, MegaDetector, own illustration.</figcaption>
+					</figure>
+					<p class="project-links">
+						<a href="https://github.com/alexvmt/TeraiNet/blob/main/terainet_paper.pdf">Paper</a> |
+						<a href="https://github.com/alexvmt/TeraiNet">Repository</a> |
+						<a href="https://huggingface.co/alexvmt/TeraiNet">Model</a>
+					</p>
+				</article>
+				<h3><i class="fas fa-satellite-dish" aria-hidden="true"></i> Remote sensing</h3>
+				<article class="project">
+					<h4>Classifying land cover in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
+					<p>
+						This project constitutes a set of scripts and notebooks for land cover classification in the Kavango-Zambezi
+						Transfrontier Conservation Area (KAZA), using Sentinel-2 and ML.
+						The pipeline trains and optimizes a model locally and performs inference in Google Earth Engine, making the process flexible and efficient.
+						While focused on KAZA, it can be adapted for other regions with suitable labeled data for training.
+					</p>
+					<figure class="project-figure">
+						<img class="project-img narrow" src="assets/example_land_cover_map.png" alt="Land cover map with a legend for bare, built up, cropland, grass, shrub, forest and wetland" width="1526" height="525" loading="lazy">
+					</figure>
+					<p class="project-links">
+						<a href="https://github.com/alexvmt/land_cover_classification_kaza">Repository</a>
+					</p>
+				</article>
+				<article class="project">
+					<h4>Mapping cropland in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
+					<p>
+						This project aims to monitor agricultural land use in the Kavango-Zambezi Transfrontier Conservation Area (KAZA).
+						The focus is on detecting farm plot locations and tracking their changes over time using Sentinel-2 and ML.
+						The project offers tools for data processing, model training and visualizations, enabling the detailed mapping of croplands.
+					</p>
+					<figure class="project-figure">
+						<img class="project-img narrow" src="assets/cropland_mapping_sioma_2020.gif" alt="Animated satellite imagery of farm plots and a river near Sioma in 2020" width="693" height="603" loading="lazy">
+					</figure>
+					<p class="project-links">
+						<a href="https://github.com/alexvmt/farm_plot_detection/blob/main/report.pdf">Report</a> |
+						<a href="https://github.com/alexvmt/farm_plot_detection">Repository</a>
+					</p>
+				</article>
+				<h3><i class="fas fa-paw" aria-hidden="true"></i> Movement ecology</h3>
+				<article class="project">
+					<h4>Detecting stationarity in animal movement data using R Shiny (EMAC23 Coding Challenge for MoveApps by Max Planck Institute of Animal Behavior)</h4>
+					<p>
+						The Stationarity Dashboard is an App on MoveApps,
+						designed to track animal behavior over time and identify stationary individuals or anomalies in movement patterns.
+						It provides users with a range of features (summary table, tracker map and distance plot)
+						and options (individual and date range filters and inputs for stationarity detection) to conveniently analyze their movement data.
+					</p>
+					<figure class="project-figure">
+						<img class="project-img" src="assets/stationarity_dashboard.png" alt="Stationarity Dashboard with a summary table, a tracker map and a distance plot" width="1522" height="619" loading="lazy">
+					</figure>
+					<p class="project-links">
+						<a href="https://github.com/alexvmt/stationarity_dashboard">Repository</a>
+					</p>
+				</article>
+				<article class="project">
+					<h4>Linking animal movement data and surface water availability using R Shiny (with Okavango Research Institute)</h4>
+					<p>
+						This is another App on MoveApps, linking animal movement and surface water
+						that has been mapped in Google Earth Engine using Sentinel-1 beforehand.
+						It allows users to track changes in animal movement and surface water over time, trying to establish a connection.
+						This is a work in progress, and working with Sentinel-1 data comes with some caveats for certain regions.
+					</p>
+					<figure class="project-figure">
+						<img class="project-img" src="assets/animal_movement_and_surface_water.png" alt="App showing animal tracks and mapped surface water on a map with lag, lead and date controls" width="1910" height="619" loading="lazy">
+					</figure>
+					<p class="project-links">
+						<a href="https://github.com/alexvmt/link-animal-movement-and-surface-water">MoveApps repository</a> |
+						<a href="https://github.com/alexvmt/surface_water_mapping">Surface water mapping repository</a>
+					</p>
+				</article>
+			</section>
+			<section id="publications" aria-labelledby="publications-title">
+				<h2 id="publications-title">Publications</h2>
+				<p>
+					Merdian-Tarko, A.V. (2025). TeraiNet: An open-source blueprint for the fast and flexible development of local species classification models. <i>5th International Workshop on Camera Traps, AI, and Ecology</i>. <a href="https://github.com/alexvmt/TeraiNet/blob/main/terainet_paper.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+				</p>
+				<p>
+					Co-author of Kölzsch, A., et al. (2025). Citizen scientists for MoveApps: Innovations and insights from volunteer coders in wildlife conservation. <i>Methods in Ecology and Evolution</i>. <a href="https://doi.org/10.1111/2041-210X.70101" target="_blank" rel="noopener noreferrer">DOI</a>
+				</p>
+				<p>
+					Guest contribution on "Data for Good Causes - An Overview" in Greiner, R., Berger, D., &amp; Böck, M. (2022). Analytics und Artificial Intelligence. <i>Springer Books</i>. <a href="https://doi.org/10.1007/978-3-658-38159-2" target="_blank" rel="noopener noreferrer">DOI</a>
+				</p>
+			</section>
+			<section id="news" aria-labelledby="news-title">
+				<h2 id="news-title">News</h2>
+				<h3 class="news-year">2025</h3>
+				<ul class="news-list">
+					<li><time datetime="2025-09">September 2025</time>: Speaker on "AI x Biodiversity: How to put Data for Good into practice" at TDWI roundtable Machine Learning and Artificial Intelligence</li>
+					<li><time datetime="2025-09">September 2025</time>: Speaker on "TeraiNet: An open-source blueprint for the fast and flexible development of local species classification models" at <a href="https://camtrapai.github.io/workshop-2025.html">5th International Workshop on Camera Traps, AI, &amp; Ecology</a></li>
+					<li><time datetime="2025-06">June 2025</time>: Speaker on "Pathways into Conservation and Open Source as a Volunteer" at <a href="https://wildlabs.net/event/variety-hour-june-2025">WILDLABS Variety Hour</a></li>
+					<li><time datetime="2025-02">February 2025</time>: Contributed to creating a <a href="https://github.com/filippovarini/community-fish-detector-dataset">community fish detector dataset</a></li>
+				</ul>
+				<h3 class="news-year">2023</h3>
+				<ul class="news-list">
+					<li><time datetime="2023-09">September 2023</time>: Participant in the <a href="https://www.ab.mpg.de/events/35372/332793">EMAC23 Workshop</a> on wildlife conservation and movement ecology organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a></li>
+					<li><time datetime="2023-06">June 2023</time>: Winning team in the <a href="https://www.exc.uni-konstanz.de/collective-behaviour/news-and-events/news/details/emac23-coding-challenge-participate-now/">EMAC23 Coding Challenge</a> organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a></li>
+				</ul>
+				<h3 class="news-year">2022</h3>
+				<ul class="news-list">
+					<li><time datetime="2022-10">October 2022</time>: Environ-Mate is featured in the data.europa.eu's <a href="https://data.europa.eu/en/academy/stories-use-case-observatory">Use Case Observatory</a> research project</li>
+				</ul>
+				<h3 class="news-year">2021</h3>
+				<ul class="news-list">
+					<li><span class="date">September to November 2021</span>: Machine Learning Engineer in <a href="https://omdena.com/projects/wood-fire/">Omdena’s Dryad Challenge</a> on “Building AI Model to Detect Forest Wood Fire through Sensor Data Analysis”</li>
+				</ul>
+				<h3 class="news-year">2020</h3>
+				<ul class="news-list">
+					<li><time datetime="2020-11">November 2020</time>: Winning team in remote <a href="https://www.helmholtz-hida.de/en/events/hida-datathon/">HIDA Datathon</a> for grand challenges on climate change</li>
+					<li><time datetime="2020-03">March 2020</time>: <a href="https://www.youtube.com/watch?v=QJJ3z9TrWFQ">Webinar</a> on Environ-Mate at EU Lunchtime Conference</li>
+				</ul>
+				<h3 class="news-year">2019</h3>
+				<ul class="news-list">
+					<li><time datetime="2019-11">November 2019</time>: Speaker at <a href="https://www.meetup.com/de-DE/cologne-ai-and-machine-learning-meetup/events/263489876/">Cologne AI and ML Meetup on AI for Social Good</a></li>
+					<li><time datetime="2019-06">June 2019</time>: Finalist team in EU Datathon in Brussels in the challenge on tackling climate change (<a href="https://github.com/environ-mate/app">Environ-Mate</a>)</li>
+				</ul>
+				<h3 class="news-year">2018</h3>
+				<ul class="news-list">
+					<li><time datetime="2018-11">November 2018</time>: Participant in Code4Green: 1st BMU Sustainability Hack in Berlin</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="container page site-footer">
+			<p>
+				Built with Bootstrap &copy; The Bootstrap Authors, Font Awesome Free and Inter.
+				Licenses:
+				<a href="assets/vendor/bootstrap/LICENSE.txt">Bootstrap (MIT)</a>,
+				<a href="assets/vendor/fontawesome/LICENSE.txt">Font Awesome Free (CC BY 4.0, SIL OFL 1.1, MIT)</a>,
+				<a href="assets/fonts/inter/LICENSE.txt">Inter (SIL OFL 1.1)</a>.
+			</p>
+		</footer>
+		<button type="button" id="back-to-start" class="btn btn-dark rounded-pill" aria-label="Back to top">↑ Back</button>
+		<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 		<script>
-			// collapse content on button click
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-			
-			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.display === "block") {
-					content.style.display = "none";
-					} else {
-					content.style.display = "block";
-					}
-				});
-				}
-		</script>
-		<h2 id="skills">Skills & Tools</h2>
-		<div class="skills-container">
-			<div class="skill-item"><i class="fas fa-code"></i> Coding: Python, R, SQL</div>
-			<div class="skill-item"><i class="fas fa-brain"></i> ML: scikit-learn, TensorFlow, Keras, PyTorch, caret</div>
-			<div class="skill-item"><i class="fas fa-globe"></i> Remote sensing & GIS: Google Earth Engine</div>
-			<div class="skill-item"><i class="fas fa-terminal"></i> Dev tools: Git, Bash, Linux</div>
-			<div class="skill-item"><i class="fas fa-users"></i> Soft skills: Teamwork, communication & presentation, data ethics</div>
-		</div>
-		<h2 id="projects">Projects</h2>
-		<h3><i class="fas fa-camera"></i> Camera traps</h3>
-		<h4>TeraiNet: A species classification model focused on the Terai region in Nepal to support Bengal tiger conservation</h4>
-		<p>
-			This project is about building a species classification model for the Terai region in Nepal,
-			using ML, open data, open source tools and free compute resources.
-			The goal is to provide an automated solution for ecologists and NGOs working on Bengal tiger conservation
-			to reduce the manual labor involved in analyzing large volumes of camera trap images.
-			The model is made openly available through AddaxAI.
-		</p>
-		<figure>
-			<img src="terainet.jpg" alt="terainet" class="center" style="max-width:75%;height:auto">
-			<figcaption>Credentials: LILA BC, MegaDetector, own illustration.</figcaption>
-		</figure>
-		<p>
-			<a href="https://github.com/alexvmt/TeraiNet/blob/main/terainet_paper.pdf">Paper</a> |
-                        <a href="https://github.com/alexvmt/TeraiNet">Repository</a> |
-			<a href="https://huggingface.co/alexvmt/TeraiNet/tree/main">Model</a>
-		</p>
-		<br><br>
-		<h3><i class="fas fa-satellite-dish"></i> Remote sensing</h3>
-		<h4>Classifying land cover in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
-		<p>
-			This project constitutes a set of scripts and notebooks for land cover classification in the Kavango-Zambezi 
-			Transfrontier Conservation Area (KAZA), using Sentinel-2 and ML.
-			The pipeline trains and optimizes a model locally and performs inference in Google Earth Engine, making the process flexible and efficient.
-			While focused on KAZA, it can be adapted for other regions with suitable labeled data for training.
-		</p>
-		<p>
-			<img src="example_land_cover_map.png" alt="example_land_cover_map" class="center" style="max-width:75%;height:auto">
-			<br><br>
-			<a href="https://github.com/alexvmt/land_cover_classification_kaza">Repository</a>
-		</p>
-		<br><br>
-		<h4>Mapping cropland in KAZA using remote sensing and ML (with WWF Germany's Space+Science Team)</h4>
-		<p>
-			This project aims to monitor agricultural land use in the Kavango-Zambezi Transfrontier Conservation Area (KAZA).
-			The focus is on detecting farm plot locations and tracking their changes over time using Sentinel-2 and ML.
-			The project offers tools for data processing, model training and visualizations, enabling the detailed mapping of croplands.
-		</p>
-		<p>
-			<img src="cropland_mapping_sioma_2020.gif" alt="cropland_mapping_sioma_2020" class="center" style="max-width:75%;height:auto">
-			<br><br>
-			<a href="https://github.com/alexvmt/farm_plot_detection/blob/main/report.pdf">Report</a> |
-			<a href="https://github.com/alexvmt/farm_plot_detection">Repository</a>
-		</p>
-		<br><br>
-		<h3><i class="fas fa-paw"></i> Movement ecology</h3>
-		<h4>Detecting stationarity in animal movement data using R Shiny (EMAC23 Coding Challenge for MoveApps by Max Planck Institute of Animal Behavior)</h4>
-		<p>
-			The Stationarity Dashboard is an App on MoveApps,
-			designed to track animal behavior over time and identify stationary individuals or anomalies in movement patterns.
-			It provides users with a range of features (summary table, tracker map and distance plot)
-			and options (individual and date range filters and inputs for stationarity detection) to conveniently analyze their movement data.
-		</p>
-		<p>
-			<img src="stationarity_dashboard.png" alt="stationarity_dashboard" class="center" style="max-width:100%;height:auto">
-			<br><br>
-			<a href="https://github.com/alexvmt/stationarity_dashboard">Repository</a>
-		<p/>
-			<br><br>
-		<h4>Linking animal movement data and surface water availability using R Shiny (with Okavango Research Institute)</h4>
-		<p>
-			This is another App on MoveApps, linking animal movement and surface water
-			that has been mapped in Google Earth Engine using Sentinel-1 beforehand.
-			It allows users to track changes in animal movement and surface water over time, trying to establish a connection.
-			This is a work in progress, and working with Sentinel-1 data comes with some caveats for certain regions.
-		</p>
-		<p>
-			<img src="animal_movement_and_surface_water.png" alt="animal_movement_and_surface_water" class="center" style="max-width:100%;height:auto">
-			<br><br>
-			<a href="https://github.com/alexvmt/link-animal-movement-and-surface-water">MoveApps repository</a> |
-			<a href="https://github.com/alexvmt/surface_water_mapping">Surface water mapping repository</a>
-		<p/>
-			<br><br>
-		<h2 id="publications">Publications</h2>
-		<p>
-			Merdian-Tarko, A.V. (2025). TeraiNet: An open-source blueprint for the fast and flexible development of local species classification models. <i>5th International Workshop on Camera Traps, AI, and Ecology</i>. <a href="https://github.com/alexvmt/TeraiNet/blob/main/terainet_paper.pdf" target="_blank">https://github.com/alexvmt/TeraiNet/blob/main/terainet_paper.pdf</a>
-		</p>
-                <p>
-			Co-author of Kölzsch, A., et al. (2025). Citizen scientists for MoveApps: Innovations and insights from volunteer coders in wildlife conservation. <i>Methods in Ecology and Evolution</i>. <a href="https://doi.org/10.1111/2041-210X.70101" target="_blank">https://doi.org/10.1111/2041-210X.70101</a>
-		</p>
-		<p>
-			Guest contribution on "Data for Good Causes - An Overview" in Greiner, R., Berger, D., & Böck, M. (2022). Analytics und Artificial Intelligence. <i>Springer Books</i>. <a href="https://doi.org/10.1007/978-3-658-38159-2" target="_blank">https://doi.org/10.1007/978-3-658-38159-2</a>
-		</p>
-		<br><br>
-		<h2 id="news">News</h2>		
-		<p>
-			<strong>September 2025</strong>: Speaker on "AI x Biodiversity: How to put Data for Good into practice" at TDWI roundtable Machine Learning and Artificial Intelligence</a>
-		</p>
-		<p>
-			<strong>September 2025</strong>: Speaker on "TeraiNet: An open-source blueprint for the fast and flexible development of local species classification models" at <a href="https://camtrapai.github.io/">5th International Workshop on Camera Traps, AI, & Ecology</a>
-		</p>		
-		<p>
-			<strong>June 2025</strong>: Speaker on "Pathways into Conservation and Open Source as a Volunteer" at <a href="https://wildlabs.net/event/variety-hour-june-2025">WILDLABS Variety Hour</a>
-		</p>
-		<p>
-			<strong>February 2025</strong>: Contributed to creating a <a href="https://github.com/filippovarini/community-fish-detector-dataset">community fish detector dataset</a>
-		</p>
-		<p>
-			<strong>September 2023</strong>: Participant in the <a href="https://www.ab.mpg.de/events/35372/332793">EMAC23 Workshop</a> on wildlife conservation and movement ecology organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
-		</p>
-		<p>
-			<strong>June 2023</strong>: Winning team in the <a href="https://www.exc.uni-konstanz.de/collective-behaviour/news-and-events/news/details/emac23-coding-challenge-participate-now/">EMAC23 Coding Challenge</a> organized by the <a href="https://www.ab.mpg.de/">Max Planck Institute of Animal Behavior</a>
-		</p>
-		<p>
-			<strong>October 2022</strong>: Environ-Mate is featured in the data.europa.eu's <a href="https://data.europa.eu/en/academy/stories-use-case-observatory">Use Case Observatory</a> research project
-		</p>
-		<p>
-			<strong>September to November 2021</strong>: Machine Learning Engineer in <a href="https://omdena.com/projects/wood-fire/">Omdena’s Dryad Challenge</a> on “Building AI Model to Detect Forest Wood Fire through Sensor Data Analysis”
-		</p>
-		<p>
-			<strong>November 2020</strong>: Winning team in remote <a href="https://www.helmholtz-hida.de/en/events/hida-datathon/">HIDA Datathon</a> for grand challenges on climate change
-		</p>
-		<p>
-			<strong>March 2020</strong>: <a href="https://www.youtube.com/watch?v=QJJ3z9TrWFQ">Webinar</a> on Environ-Mate at EU Lunchtime Conference
-		</p>
-		<p>
-			<strong>November 2019</strong>: Speaker at <a href="https://www.meetup.com/de-DE/cologne-ai-and-machine-learning-meetup/events/263489876/">Cologne AI and ML Meetup on AI for Social Good</a>
-		</p>
-		<p>
-			<strong>June 2019</strong>: Finalist team in <a href="https://op.europa.eu/en/web/eudatathon/2019-edition">EU Datathon</a> in Brussels in the challenge on tackling climate change (<a href="https://github.com/environ-mate/app">Environ-Mate</a>)
-		</p>
-		<p>
-			<strong>November 2018</strong>: Participant in Code4Green: 1st BMU Sustainability Hack in Berlin
-		</p>
-		<!-- Back to Start button -->
-		<div id="back-to-start" onclick="scrollToTop()">↑ Back</div>
-		<script>
-			// show the Back to Start button when scrolling down
-			window.onscroll = function() {
-				var backButton = document.getElementById("back-to-start");
-				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-					backButton.style.display = "block";
-				} else {
-					backButton.style.display = "none";
-				}
-			};
-			
-			// smooth scroll to top
-			function scrollToTop() {
-				window.scrollTo({ top: 0, behavior: 'smooth' });
-			}
+			// assemble the email link so the address is not in the plain HTML
+			var emailLink = document.querySelector('.email');
+			emailLink.href = 'mailto:' + emailLink.dataset.user + '@' + emailLink.dataset.domain;
+
+			var backButton = document.getElementById('back-to-start');
+			window.addEventListener('scroll', function () {
+				var scrolled = document.body.scrollTop > 200 || document.documentElement.scrollTop > 200;
+				backButton.classList.toggle('visible', scrolled);
+			}, { passive: true });
+
+			// scroll to top (smooth unless reduced motion is requested, see CSS)
+			backButton.addEventListener('click', function () {
+				window.scrollTo({ top: 0 });
+			});
 		</script>
 	</body>
 </html>
